@@ -1,9 +1,10 @@
-import Register from "./Components/Register/Register";
+import { Sidebar } from "lucide-react";
 
 
-const App=()=>{
-  return(
-   <Register/>
+
+const App = () => {
+  return (
+    <Sidebar />
   )
 }
 export default App;
