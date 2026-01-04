@@ -1,10 +1,10 @@
-import { Sidebar } from "lucide-react";
+import Sideber from '../src/Components/Sidebar/Sidebar'
 
 
 
 const App = () => {
   return (
-    <Sidebar />
+    <Sideber />
   )
 }
 export default App;
