@@ -1,0 +1,56 @@
+.leftPanel {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 60px;
+  border-radius: 8px;
+}
+
+.leftContent {
+  max-width: 520px;
+}
+
+.logoBox {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+}
+
+.featureList li {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.featureList li svg {
+  margin-right: 10px;
+}
+
+.featureList li span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.85;
+  margin-left: 28px;
+}
+
+
+
+.formStyle {
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.customInput {
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.customInput:focus {
+    border-color: black !important;
+    box-shadow: 0 0 0 2px rgba(6, 6, 7, 0.2) !important;
+}

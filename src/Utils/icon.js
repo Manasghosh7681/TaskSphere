@@ -6,7 +6,13 @@ import {
   Bell,
   Wallet,
   ChevronRight,
-  Menu
+  Menu,
+  Building2,
+  Globe,
+  Mail,
+  Phone,
+  Lock,
+  CheckCircle2
 } from "lucide-react";
 
 export const ICONS = {
@@ -17,6 +23,12 @@ export const ICONS = {
   Notificatios: Bell,
   wallet: Wallet,
   arrow: ChevronRight,
-  Menu:Menu,
+  Menu: Menu,
+  Building2,
+  Globe,
+  Mail,
+  Phone,
+  Lock,
+  CheckCircle2
 
 };

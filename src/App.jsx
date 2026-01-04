@@ -1,8 +1,10 @@
-import Sidebar from "./Components/Sidebar/Sidebar"
+import Register from "./Components/Register/Register";
+
 
 const App=()=>{
   return(
-    <Sidebar/>
+   <Register/>
   )
 }
 export default App;
+
