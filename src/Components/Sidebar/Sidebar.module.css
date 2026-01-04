@@ -1,8 +1,12 @@
 .sidebar {
-    width: 220px !important;
-
-
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #fff;
 }
+
 
 .element {
     cursor: pointer;
@@ -47,4 +51,51 @@
     max-height: 300px;
     /* large enough */
 
+}
+
+.mobileToggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: white;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    /* z-index: 3; */
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .mobileToggle {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .openSidebar {
+        transform: translateX(0);
+    }
+}
+
+.openSidebar {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }

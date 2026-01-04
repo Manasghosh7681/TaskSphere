@@ -5,7 +5,8 @@ import {
   LogOut,
   Bell,
   Wallet,
-  ChevronRight  // Changed from Arrows to a more standard icon
+  ChevronRight,
+  Menu
 } from "lucide-react";
 
 export const ICONS = {
@@ -15,5 +16,7 @@ export const ICONS = {
   logout: LogOut,
   Notificatios: Bell,
   wallet: Wallet,
-  arrow: ChevronRight  // Changed key to match what you're using
+  arrow: ChevronRight,
+  Menu:Menu,
+
 };
