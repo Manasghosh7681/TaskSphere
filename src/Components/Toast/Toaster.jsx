@@ -12,7 +12,7 @@ const Toaster = ({ type, message }) => {
         Info
     } = ICONS;
 
-    // 🔹 choose icon based on type
+    //  choose icon based on type
     const getIcon = () => {
         switch (type) {
             case 'success':
@@ -37,7 +37,7 @@ const Toaster = ({ type, message }) => {
             // parent clears message
         }, 3000);
 
-        return () => clearTimeout(toastRef.current); // ✅ correct cleanup
+        return () => clearTimeout(toastRef.current); //  correct cleanup
     }, [message]);
 
     if (!message) return null;
