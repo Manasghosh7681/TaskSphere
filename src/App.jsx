@@ -1,10 +1,15 @@
-import Sideber from '../src/Components/Sidebar/Sidebar'
+import LoginForm from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+
+
 
 
 
 const App = () => {
   return (
-    <Sideber />
+    <LoginForm/>
+
+
   )
 }
 export default App;

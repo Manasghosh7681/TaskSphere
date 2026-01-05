@@ -1,0 +1,27 @@
+.background {
+    background-color: rgb(248, 251, 250);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formstyle {
+    padding: 12px 20px;
+    width: 400px;
+    height: 420px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.remberMe {
+  font-size: 0.84rem;
+  color: #6c757d; /* gray color */
+}
+.forgotText {
+  font-size: 0.84rem;
+  color: rgb(0, 102, 255); 
+  cursor: pointer;
+}

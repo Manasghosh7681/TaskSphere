@@ -12,7 +12,11 @@ import {
   Mail,
   Phone,
   Lock,
-  CheckCircle2
+  CheckCircle2,
+  CheckCircle,
+  TriangleAlert,
+  XCircle,
+  Info
 } from "lucide-react";
 
 export const ICONS = {
@@ -29,6 +33,10 @@ export const ICONS = {
   Mail,
   Phone,
   Lock,
-  CheckCircle2
+  CheckCircle2,
+  CheckCircle,
+  TriangleAlert,
+  XCircle,
+  Info
 
 };

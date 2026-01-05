@@ -1,0 +1,12 @@
+.customInput {
+  border: 1.5px solid #ced4da; /* soft neutral gray */
+  border-radius: 8px;
+  box-shadow: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.customInput:focus {
+  border-color: gray; /* Bootstrap primary blue */
+  box-shadow: 0 0 0 0.06rem grey;
+  outline: none;
+}
