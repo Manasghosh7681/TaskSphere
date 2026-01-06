@@ -93,7 +93,7 @@ const Sidebar = () => {
                             })
 
                         }
-                        <div className={`${styles.element} d-flex gap-2 align-items-center`} style={{ position: 'fixed', bottom: 0, marginBottom: '18px' }}>
+                        <div  className={`${styles.element} d-flex gap-2 align-items-center`} style={{ position: 'fixed', bottom: 0, marginBottom: '18px' }}>
                             <Logout
                                 size={18}
                                 className={styles.icon} />

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import styles from './Login.module.css'
 import { ICONS } from '../../Utils/icon';
-
+import { useNavigate } from 'react-router-dom';
 export default function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false)
-
+    const [remember, setRemember] = useState(false);
+    const navigate=useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -15,6 +15,7 @@ export default function LoginForm() {
             localStorage.setItem('user', JSON.stringify(user))
         }
         console.log(email, password, remember)
+        navigate('/home')
     };
     const { Mail, Lock } = ICONS
 
@@ -49,7 +50,7 @@ export default function LoginForm() {
                             <label className={styles.forgotText} >Forgot password?</label>
                         </div>
                     </div>
-                    <button type='submit' className={`btn btn-primary d-block w-100 mt-4 pt-1 customInput`}>Sign In</button>
+                    <button type='submit' className={`btn btn-primary d-block w-100 mt-4 pt-1 `}>Sign In</button>
                 </form>
             </div>
         </div>

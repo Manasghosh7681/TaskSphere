@@ -1,15 +1,12 @@
-import LoginForm from "./Pages/Login/Login";
 
-
-
+import { RouterProvider } from 'react-router-dom'
+import { Routes } from '../src/Routes/Routes'
 
 
 
 const App = () => {
   return (
-    <LoginForm/>
-
-
+    <RouterProvider router={Routes} />
   )
 }
 export default App;
