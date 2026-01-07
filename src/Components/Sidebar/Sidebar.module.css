@@ -1,5 +1,5 @@
 .sidebar {
-    width: 220px;
+    width: 280px;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,30 +11,44 @@
 .element {
     cursor: pointer;
     font-size: 18px;
-    margin-left: 18px;
-    background: linear-gradient(to right, #3a2fb4, #7bfea4);
-    /* gradient colors */
-    -webkit-background-clip: text;
-    /* clip background to text */
-    -webkit-text-fill-color: transparent;
-    /* make text transparent so gradient shows */
-    transition: all 0.3s ease;
+    margin-left: 8px;
+    margin-right: 8px;
 
+    background: transparent;
+    color: #3a2fb4;
+
+    transition: all 0.3s ease;
+    padding: 6px 10px 6px 20px;
+    border-radius: 12px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
 }
+
 
 .element:hover {
-    background: linear-gradient(to right, #ff512f, #dd2476);
-    -webkit-background-clip: text;
-    transform: translateX(5px);
+    background: linear-gradient(to right, #3a2fb4, #7bfea4);
+    color: white;
 }
+
+.active {
+    background: linear-gradient(to right, #3a2fb4, #7bfea4);
+    color: white;
+}
+
 
 .icon {
-    color: rgba(59, 26, 190, 1)
+    color: #3a2fb4;
 }
 
-.element:hover .icon {
-    color: #ff512f;
+.element:hover .icon,
+.active .icon {
+    color: white;
 }
+
+
+
 
 .childWrapper {
     max-height: 0;
@@ -47,11 +61,36 @@
 
 }
 
+.childElement {
+    border-radius: 12px;
+    background: transparent;
+    color: #3a2fb4;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 39px;
+    padding: 6px 10px 6px 20px;
+    
+    
+
+}
+
+.childElement:hover {
+    background: linear-gradient(to right, #d0cfd2, #c9cecb);
+    color: white;
+}
+.childActive{
+      background: linear-gradient(to right, #d0cfd2, #c9cecb);
+    color: white;
+}
+
 .open {
     max-height: 300px;
     /* large enough */
 
 }
+
 
 .mobileToggle {
     position: fixed;

@@ -15,6 +15,10 @@ const Sidebar = () => {
     const [SideData] = useState(AdminSidebar)
     const [showChild, setShowChild] = useState({})
     const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const [activeIndex, setActiveIndex] = useState({
+        child: null,
+        parent: null
+    });
     const showToggle = (index) => {
         setShowChild((prev) => {
             return (
@@ -46,7 +50,7 @@ const Sidebar = () => {
                 />
             )}
 
-            <div className={`bg-light vh-100 ${styles.sidebar}  ${isMobileOpen ? styles.openSidebar : ''} pt-3`}>
+            <div className={`bg-light vh-100 ${styles.sidebar}  ${isMobileOpen ? styles.openSidebar : ''} pt-3 ps-1`}>
 
                 {SideData && (
                     <div  >
@@ -57,7 +61,7 @@ const Sidebar = () => {
                                 return (
                                     <div key={index}   >
 
-                                        <p className={`${styles.element} d-flex gap-2 align-items-center `} onClick={() => side.child && showToggle(index)}>
+                                        <p className={`${styles.element} d-flex gap-3 align-items-center ${activeIndex.parent === index ? styles.active : ''} `} onClick={() => { setActiveIndex((prev) => ({ ...prev, parent: index })), side.child && showToggle(index) }}>
                                             <Icon
                                                 size={18}
                                                 className={styles.icon}
@@ -80,8 +84,8 @@ const Sidebar = () => {
                                             <div className={`${styles.childWrapper} ${isExpanded ? styles.open : ''}`}>
                                                 {side.child.map((sideChild, ind) => {
                                                     return (
-                                                        <div key={ind} style={{ marginLeft: '35px' }}>
-                                                            <p className={`${styles.element} fs-6`}>{sideChild}</p>
+                                                        <div key={ind} style={{ marginLeft: '35px' }} onClick={() => { setActiveIndex((prev) => ({ ...prev, child: ind })) }} >
+                                                            <p className={`${styles.childElement} fs-6 ${activeIndex.child === ind ? styles.childActive : ''}`}>{sideChild}</p>
                                                         </div>
                                                     )
                                                 })}
@@ -93,7 +97,7 @@ const Sidebar = () => {
                             })
 
                         }
-                        <div  className={`${styles.element} d-flex gap-2 align-items-center`} style={{ position: 'fixed', bottom: 0, marginBottom: '18px' }}>
+                        <div className={`${styles.element} d-flex gap-2 align-items-center`} style={{ position: 'fixed', bottom: 0, marginBottom: '18px' }}>
                             <Logout
                                 size={18}
                                 className={styles.icon} />
