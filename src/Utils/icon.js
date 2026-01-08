@@ -18,7 +18,8 @@ import {
   XCircle,
   Info,
   CalendarDays,
-  MapPin
+  MapPin,
+  MoveRight 
 } from "lucide-react";
 
 export const ICONS = {
@@ -41,6 +42,7 @@ export const ICONS = {
   XCircle,
   Info,
   CalendarDays,
-  MapPin
+  MapPin,
+  MoveRight 
 
 };

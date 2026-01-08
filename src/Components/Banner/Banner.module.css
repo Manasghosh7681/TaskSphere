@@ -9,7 +9,7 @@
     border-radius: 14px;
     padding: 20px;
     color: white;
-    position: absolute;
+    /* position: absolute; */
 }
 
 @media (max-width: 768px) {
