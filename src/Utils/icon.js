@@ -16,7 +16,9 @@ import {
   CheckCircle,
   TriangleAlert,
   XCircle,
-  Info
+  Info,
+  CalendarDays,
+  MapPin
 } from "lucide-react";
 
 export const ICONS = {
@@ -37,6 +39,8 @@ export const ICONS = {
   CheckCircle,
   TriangleAlert,
   XCircle,
-  Info
+  Info,
+  CalendarDays,
+  MapPin
 
 };

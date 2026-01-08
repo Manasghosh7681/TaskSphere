@@ -17,13 +17,24 @@ const Sidebar = () => {
     const [isMobileOpen, setIsMobileOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState({
         child: null,
-        parent: null
+        parent: 0
     });
     const showToggle = (index) => {
         setShowChild((prev) => {
+            const isClosing = prev[index]; // true means closing
+
+            // reset child when closing
+            if (isClosing) {
+                setActiveIndex(prevActive => ({
+                    ...prevActive,
+                    child: null
+                }));
+            }
             return (
                 { ...prev, [index]: !prev[index] }
+
             )
+
         })
     }
     const ArrowIcon = ICONS.arrow
@@ -97,11 +108,13 @@ const Sidebar = () => {
                             })
 
                         }
-                        <div className={`${styles.element} d-flex gap-2 align-items-center`} style={{ position: 'fixed', bottom: 0, marginBottom: '18px' }}>
-                            <Logout
-                                size={18}
-                                className={styles.icon} />
-                            Logout</div>
+                        <div className={styles.logoutWrapper}>
+                            <p className={`${styles.element} d-flex gap-2 align-items-center ${styles.logout}`}>
+                                <Logout size={18} className={styles.icon} />
+                                Logout
+                            </p>
+                        </div>
+
                     </div>
                 )}
             </div></>

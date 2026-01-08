@@ -1,0 +1,40 @@
+.banner {
+    /* background: linear-gradient(135deg, #FF8FCF 0%, #C77DD7 100%); */
+    background: linear-gradient(135deg, #3a2fb4, #7bfea4);
+    height: 190px;
+
+    margin-left: 280px;
+    width: calc(100% - 280px);
+
+    border-radius: 14px;
+    padding: 20px;
+    color: white;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        margin-top: 60px;
+        margin-left: 0;
+        width: 100%;
+        border-radius: 0 0 14px 14px;
+    }
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+    bottom: -10px
+}
+
+.image {
+    height: 95px;
+    width: 95px;
+    /* position: relative; */
+    /* object-fit: contain; */
+    border-radius: 50%;
+
+}

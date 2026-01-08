@@ -5,6 +5,7 @@
     left: 0;
     z-index: 2;
     background: #fff;
+    
 }
 
 
@@ -105,7 +106,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .sidebar {
         transform: translateX(0);
     }
@@ -138,3 +139,24 @@
     background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
+.logoutWrapper {
+    position: fixed;
+    bottom: 18px;
+    left: 0;
+    width: 270px;
+    padding: 12px 8px 0 8px; /* space after line */
+}
+
+/* TOP SEPARATOR LINE */
+.logoutWrapper::before {
+    content: "";
+    display: block;
+    border-top: 1px dashed gray;
+    margin-bottom: 12px;
+}
+
+/* logout button itself */
+.logout {
+    width: 100%;
+}
+
